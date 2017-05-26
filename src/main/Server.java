@@ -56,7 +56,7 @@ public class Server {
 					System.out.println("Settings loaded");
 				} catch (InvalidPropertiesFormatException e) {
 					System.out
-							.println("ERROR: Wrong Properties Format in settings.xml Resseting setting.xml to default values.");
+							.println("ERROR: Wrong Properties format in settings.xml. Resseting setting.xml to default values.");
 					settings.setProperty("port", "1337");
 					settings.setProperty("userFile", "users.config");
 					settings.setProperty("logFile", "log.txt");
@@ -70,7 +70,7 @@ public class Server {
 					System.out.println("FATAL ERROR: Can't read settings.xml");
 					System.exit(1);
 				} else {
-					System.out.println("ERROR: settings.xml doesnn't exist! Trying to create default settings.xml");
+					System.out.println("ERROR: settings.xml doesn't exist! Trying to create default settings.xml");
 					file.createNewFile();
 					settings.setProperty("port", "1337");
 					settings.setProperty("userFile", "users.config");
